@@ -22,7 +22,7 @@ class BeerController {
     }
 
     @PostMapping
-    void addBeer(@RequestBody Beer beer) {
+    void addBeer(@RequestBody Beer beer) throws NewsletterSendingException {
         beerService.addBeer(beer);
     }
 

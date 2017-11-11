@@ -28,7 +28,13 @@ public class Beer {
 
     private String brand;
 
-    private LocalDateTime validTo;
+    /** volume in ml*/
+    private int volume;
+
+    /** alcohol in %*/
+    private double alcohol;
+
+    private LocalDateTime expirationDate;
 
     @NotNull
     private BeerType beerType;
@@ -41,10 +47,12 @@ public class Beer {
     @JsonIgnore
     LocalDateTime updated;
 
-    public Beer(String name, String brand, BeerType beerType) {
+    public Beer(String name, String brand, BeerType beerType, int volume, double alcohol) {
         this.name = name;
         this.brand = brand;
         this.beerType = beerType;
+        this.volume = volume;
+        this.alcohol = alcohol;
     }
 
     @PrePersist

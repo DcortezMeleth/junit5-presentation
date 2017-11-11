@@ -116,7 +116,7 @@
 		<dependency>
 			<groupId>org.springframework.test</groupId>
 			<artifactId>spring-test-junit5</artifactId>
-			<version>1.0.0.RC3</version>
+			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -152,6 +152,13 @@
 			<groupId>el-impl</groupId>
 			<artifactId>el-impl</artifactId>
 			<version>1.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>2.12.0</version>
 			<scope>test</scope>
 		</dependency>
 

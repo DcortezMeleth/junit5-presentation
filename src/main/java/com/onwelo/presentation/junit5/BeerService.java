@@ -6,7 +6,7 @@ interface BeerService {
 
     Iterable<Beer> getAllBeers();
 
-    void addBeer(Beer beer);
+    void addBeer(Beer beer) throws NewsletterSendingException;
 
     Beer getBeer(long beerId);
 
