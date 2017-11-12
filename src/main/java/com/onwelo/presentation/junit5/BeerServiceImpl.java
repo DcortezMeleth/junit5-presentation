@@ -1,18 +1,17 @@
 package com.onwelo.presentation.junit5;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 class BeerServiceImpl implements BeerService {
 
-    @Autowired
     private BeerRepository beerRepository;
 
-    @Autowired
     private SendingEmailService sendingEmailService;
 
     @Override
@@ -21,7 +20,7 @@ class BeerServiceImpl implements BeerService {
     }
 
     @Override
-    @Transactional(rollbackFor = NewsletterSendingException.class)
+    @Transactional(rollbackFor = Exception.class)
     public void addBeer(Beer beer) throws NewsletterSendingException {
         beerRepository.save(beer);
         sendingEmailService.sandEmailToSubscribedCustomers();

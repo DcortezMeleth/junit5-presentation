@@ -11,8 +11,7 @@ import java.lang.annotation.Target;
 
 @SpringJUnitJupiterWebConfig(classes = {
         BeerStoreConfiguration.class,
-        PersistenceConfiguration.class,
-        AdditionalTestConfiguration.class
+        PersistenceConfiguration.class
 })
 @ExtendWith(MockitoExtension.class)
 @Retention(RetentionPolicy.RUNTIME)
