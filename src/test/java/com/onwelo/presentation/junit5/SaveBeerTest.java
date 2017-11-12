@@ -21,7 +21,6 @@ class SaveBeerTest {
     class WorkingRight {
 
         private BeerService beerService = new BeerServiceImpl(beerRepository, new SendingEmailServiceImpl());
-        ;
 
         @Test
         void saveBeer_shouldSucceed() throws Exception {
